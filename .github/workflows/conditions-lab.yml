@@ -19,5 +19,5 @@ jobs:
         run: echo "Main Branch"
 
       - name: Run Only For Your User
-        if: github.actor == 'seday1113'
+        if: github.actor == 'admin'
         run: echo "Welcome Satya"
