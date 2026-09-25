@@ -1,0 +1,16 @@
+name: Environment Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-dev:
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: dev
+
+    steps:
+      - name: Deploy
+        run: echo "Deploying to DEV"
