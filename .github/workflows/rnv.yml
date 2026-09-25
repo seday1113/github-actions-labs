@@ -1,0 +1,25 @@
+name: Environment Variables Lab
+
+on:
+  workflow_dispatch:
+
+env:
+  APP_NAME: github-actions-lab
+  ENVIRONMENT: dev
+
+jobs:
+
+  env-demo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Display Variables
+        run: |
+          echo "Application: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
+
+      - name: Show Runner User
+        run: |
+          echo "Executed by $USER"
