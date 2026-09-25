@@ -1,0 +1,24 @@
+name: Runner Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  runner-info:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Display Runner OS
+        run: uname -a
+
+      - name: Display Current User
+        run: whoami
+
+      - name: Display CPU Info
+        run: nproc
+
+      - name: Display Memory
+        run: free -h
