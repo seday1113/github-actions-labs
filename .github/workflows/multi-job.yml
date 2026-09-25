@@ -1,0 +1,23 @@
+name: Multi Job Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build Step
+        run: echo "Building application"
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Step
+        run: echo "Running tests"
+
