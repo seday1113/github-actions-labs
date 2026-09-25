@@ -1,0 +1,22 @@
+name: Artifact Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  artifact-demo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Create File
+        run: |
+          echo "GitHub Actions Artifact Demo" > artifact.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab-artifact
+          path: artifact.txt
