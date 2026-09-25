@@ -1,0 +1,20 @@
+name: YAML Structure Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+  devops-lab:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Display Current Directory
+        run: pwd
+
+      - name: Display Files
+        run: ls -la
+
+      - name: Display Date
+        run: date
