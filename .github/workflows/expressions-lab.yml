@@ -1,0 +1,29 @@
+name: Expressions Lab
+
+on:
+  workflow_dispatch:
+
+env:
+  APP_NAME: github-actions-lab
+
+jobs:
+
+  expression-demo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Display GitHub Context
+        run: |
+          echo "Actor: ${{ github.actor }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+
+      - name: Display Environment Variable
+        run: |
+          echo "Application: ${{ env.APP_NAME }}"
+
+      - name: Display Secret
+        run: |
+          echo "Secret: ${{ secrets.MY_SECRET }}"
