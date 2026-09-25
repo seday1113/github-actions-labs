@@ -1,0 +1,23 @@
+name: Matrix Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  matrix-demo:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version:
+          - "3.10"
+          - "3.11"
+          - "3.12"
+
+    steps:
+
+      - name: Show Version
+        run: |
+          echo "Testing Python ${{ matrix.python-version }}"
