@@ -1,0 +1,23 @@
+name: Conditions Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  conditions-demo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Always Runs
+        run: echo "Step 1"
+
+      - name: Run Only On Main
+        if: github.ref == 'refs/heads/main'
+        run: echo "Main Branch"
+
+      - name: Run Only For Your User
+        if: github.actor == 'seday1113'
+        run: echo "Welcome Satya"
