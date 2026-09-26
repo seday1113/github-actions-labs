@@ -1,0 +1,19 @@
+name: My Composite Action
+
+description: Demo Composite Action
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Show Date
+      shell: bash
+      run: date
+
+    - name: Show User
+      shell: bash
+      run: whoami
+
+    - name: Show Message
+      shell: bash
+      run: echo "Hello from Composite Action"

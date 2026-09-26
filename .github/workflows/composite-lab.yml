@@ -1,0 +1,17 @@
+name: Composite Action Lab
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  composite-demo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Run Composite Action
+        uses: ./.github/actions/my-action
